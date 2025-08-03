@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OBSIDIAN CUT Design System
+   Sleek, sharp, cutting-edge aesthetic with precision and stealth
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* OBSIDIAN CUT Color Palette */
+    --abyss-black: 0 0% 4%; /* #0A0A0A */
+    --obsidian-white: 0 0% 95%; /* #F3F3F3 */
+    --iron-grey: 0 0% 29%; /* #4B4B4B */
+    --submission-ash: 0 0% 49%; /* #7D7D7D */
+    --crimson-glow: 0 82% 59%; /* #FF2D2D */
+    
+    /* Semantic Tokens */
+    --background: var(--abyss-black);
+    --foreground: var(--obsidian-white);
+
+    --card: var(--abyss-black);
+    --card-foreground: var(--obsidian-white);
+
+    --popover: var(--abyss-black);
+    --popover-foreground: var(--obsidian-white);
+
+    --primary: var(--obsidian-white);
+    --primary-foreground: var(--abyss-black);
+
+    --secondary: var(--iron-grey);
+    --secondary-foreground: var(--obsidian-white);
+
+    --muted: var(--iron-grey);
+    --muted-foreground: var(--submission-ash);
+
+    --accent: var(--crimson-glow);
+    --accent-foreground: var(--obsidian-white);
+
+    --destructive: var(--crimson-glow);
+    --destructive-foreground: var(--obsidian-white);
+
+    --border: var(--iron-grey);
+    --input: var(--abyss-black);
+    --ring: var(--crimson-glow);
+
+    /* Sharp angular radius for obsidian aesthetic */
+    --radius: 0.125rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Angular, obsidian-inspired geometric shapes */
+  .obsidian-shard {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .obsidian-shard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 30%, hsl(var(--crimson-glow) / 0.1) 31%, hsl(var(--crimson-glow) / 0.1) 32%, transparent 33%);
+    pointer-events: none;
+  }
+  
+  /* Sharp angular borders */
+  .angular-border {
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  
+  /* Crimson glow effect */
+  .crimson-glow {
+    box-shadow: 0 0 20px hsl(var(--crimson-glow) / 0.3), inset 0 1px 0 hsl(var(--crimson-glow) / 0.2);
+  }
+  
+  /* Sharp edge animation */
+  .sharp-transition {
+    transition: all 0.2s linear;
+  }
+  
+  /* Obsidian reflective surface */
+  .obsidian-surface {
+    background: linear-gradient(135deg, 
+      hsl(var(--abyss-black)) 0%, 
+      hsl(var(--iron-grey) / 0.1) 50%, 
+      hsl(var(--abyss-black)) 100%);
+  }
+}
+
+@layer components {
+  /* Typography classes following brand guidelines */
+  .heading-command {
+    font-family: 'Orbitron', 'Eurostile Extended', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: hsl(var(--obsidian-white));
+  }
+  
+  .heading-directive {
+    font-family: 'Orbitron', 'Eurostile Extended', Arial, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .body-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    color: hsl(var(--submission-ash));
+  }
+  
+  .micro-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    color: hsl(var(--iron-grey));
+  }
+}
