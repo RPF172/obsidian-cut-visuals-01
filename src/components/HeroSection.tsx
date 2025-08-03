@@ -1,6 +1,6 @@
 import React from "react";
 
-const HERO_BG = "/src/assets/obsidian-shards-bg.jpg"; // Replace with FlexMasterJoe's image path
+const HERO_BG = "/lovable-uploads/a2f0f00c-8c24-49d3-9dd0-18152c851e39.png";
 
 export const HeroSection: React.FC = () => {
   return (
