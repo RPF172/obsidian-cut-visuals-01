@@ -1,6 +1,6 @@
 import React from "react";
 
-const HERO_BG = "/lovable-uploads/a2f0f00c-8c24-49d3-9dd0-18152c851e39.png";
+const HERO_BG = "/lovable-uploads/1873b764-7f45-4231-bcbe-9b25cfa90873.png";
 
 export const HeroSection: React.FC = () => {
   return (
