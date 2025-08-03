@@ -13,7 +13,7 @@ const Index = () => {
         className="absolute inset-0"
         style={{
           backgroundImage: `url(/lovable-uploads/2b286c99-0c74-4c93-bdf5-bf6e08507389.png)`,
-          backgroundSize: 'cover',
+          backgroundSize: '50%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
