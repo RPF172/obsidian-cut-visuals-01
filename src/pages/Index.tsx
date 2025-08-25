@@ -13,7 +13,7 @@ const Index = () => {
         className="absolute inset-0"
         style={{
           backgroundImage: `url(/lovable-uploads/2b286c99-0c74-4c93-bdf5-bf6e08507389.png)`,
-          backgroundSize: '50%',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
@@ -34,9 +34,9 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <main className="relative z-10 flex flex-col items-center justify-center h-screen px-6 md:px-8 text-center">
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 md:px-8 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="heading-command text-6xl md:text-8xl lg:text-[12rem] leading-tight">
+          <h1 className="heading-command text-4xl md:text-6xl lg:text-8xl leading-tight">
             FLEX MASTER
             <br />
             <span className="text-crimson-glow">JOE</span>
@@ -44,32 +44,19 @@ const Index = () => {
           
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="body-text text-lg md:text-xl leading-relaxed">
-              The Alpha you were born to serve.
-              <br />
-              Flex. Pay. Worship. Repeat.
+              Obsidian Black is defined by a sleek, dark, and cutting-edge aesthetic. 
+              Its glossy, black surfaces are sharp and smooth, exuding a modern, futuristic feel. 
+              Thin lines and crisp edges add to the overall sense of precision, creating 
+              a look that is both minimal and powerful.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <ObsidianButton 
-              variant="command" 
-              size="lg"
-              onClick={() => {
-                // Navigate to payment/tribute page - you'll need to create this route
-                window.location.href = '/tribute';
-              }}
-            >
-              🔥 TRIBUTE NOW
+            <ObsidianButton variant="command" size="lg">
+              EXPLORE DESIGN
             </ObsidianButton>
-            <ObsidianButton 
-              variant="shard" 
-              size="lg"
-              onClick={() => {
-                const aboutSection = document.querySelector('[data-section="about"]');
-                aboutSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              💪 ENTER MY WORLD
+            <ObsidianButton variant="shard" size="lg">
+              VIEW PORTFOLIO
             </ObsidianButton>
           </div>
         </div>
@@ -81,7 +68,7 @@ const Index = () => {
       </div>
 
       {/* Philosophy Section */}
-      <section data-section="about" className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 py-20">
+      <section className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <ObsidianCard className="group hover:border-crimson-glow/50">
             <ObsidianCardHeader>
