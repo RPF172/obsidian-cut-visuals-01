@@ -7,21 +7,7 @@ import obsidianShardsBackground from '@/assets/obsidian-shards-bg.jpg';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-abyss-black text-obsidian-white relative overflow-hidden">
-      {/* Hero background image */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(/lovable-uploads/d723ccc9-d184-4250-941e-5e55f63f9813.png)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
-      {/* Contrasting overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-abyss-black/80 via-abyss-black/60 to-abyss-black/80"></div>
-      
+    <div className="min-h-screen bg-abyss-black text-obsidian-white">
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between p-6 md:p-8">
         <div className="flex items-center space-x-4">
@@ -34,8 +20,21 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 md:px-8 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <main className="relative flex flex-col items-center justify-center min-h-[80vh] px-6 md:px-8 text-center overflow-hidden">
+        {/* Hero background image */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(/lovable-uploads/d723ccc9-d184-4250-941e-5e55f63f9813.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        
+        {/* Contrasting overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-abyss-black/80 via-abyss-black/60 to-abyss-black/80"></div>
+        <div className="relative z-10 max-w-4xl mx-auto space-y-8">
           <h1 className="heading-command text-4xl md:text-6xl lg:text-8xl leading-tight">
             FLEX MASTER
             <br />
